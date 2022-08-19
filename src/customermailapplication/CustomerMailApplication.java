@@ -20,11 +20,18 @@ public class CustomerMailApplication {
     private Customer customer;
     public void getCustomerTypeFromUser(String customerType) {
         switch(customerType) {
+            //RegularCustomer
             case "Regular":
                 customer = new RegularCustomer();
                 break;
-            //complete MountainCustomer
-            //complete DelinquentCustomer 
+            //MountainCustomer
+            case "Mountain":
+                customer = new MountainCustomer();
+                break;
+            // DelinquentCustomer 
+            case "Delinquent":
+                customer = new DelinquentCustomer();
+                break;
         }
     }
     public String generateMail() {
